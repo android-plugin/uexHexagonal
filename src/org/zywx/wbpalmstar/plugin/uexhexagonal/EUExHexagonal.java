@@ -156,8 +156,6 @@ public class EUExHexagonal extends EUExBase {
 
 	@Override
 	public boolean clean() {
-		BDebug.i("fzy", TAG + "   clean()----->" + this.toString() + isOpened);
-		close(null);
 		return true;
 	}
 }
