@@ -73,14 +73,19 @@ public class EUExHexagonal extends EUExBase {
 		}
 	}
 
-	public void open(String[] parm) {
-		BDebug.i("fzy", "open()-->" + isOpened);
+	public void open(String[] params) {
+		if (params==null||params.length<4){
+            BDebug.i(TAG,"params error...");
+            return;
+        }
+		BDebug.i(TAG, "open()-->" + isOpened);
 		if (!isOpened) {
-			RelativeLayout.LayoutParams parms = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,
-					ViewGroup.LayoutParams.WRAP_CONTENT);
-			parms.addRule(RelativeLayout.CENTER_IN_PARENT);
+			RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(Integer.valueOf(params[2]),
+					Integer.valueOf(params[3]));
+            layoutParams.leftMargin= Integer.parseInt(params[0]);
+            layoutParams.topMargin= Integer.parseInt(params[1]);
 			decorView = initView();
-			addViewToCurrentWindow(decorView, parms);
+			addViewToCurrentWindow(decorView, layoutParams);
 
 			isOpened = true;
 		}else{

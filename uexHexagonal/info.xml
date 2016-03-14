@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <uexplugins>
     <plugin
-        uexName="uexHexagonal" version="3.0.3" build="3">
-        <info>3:修复点击图片打开新窗口后六棱柱显示在窗口上层问题</info>
+        uexName="uexHexagonal" version="3.0.4" build="4">
+        <info>4:修复open参数无效的问题</info>
+        <build>3:修复点击图片打开新窗口后六棱柱显示在窗口上层问题</build>
         <build>2:增加cbOpenHexagonal函数回调接口</build>
         <build>1:修复图片顺序问题</build>
         <build>0:六面体功能插件</build>
